@@ -2,7 +2,7 @@ jQuery( document ).ready(function( $ ) {
 
   // declaration
   var previousBgClass = '';
-  var currentHeaderStyle = 'bimg';
+  var currentHeaderStyle = 'classic';
 
   /**
    * set settings panel button
@@ -167,13 +167,15 @@ jQuery( document ).ready(function( $ ) {
 
 
   /**
-   * initial all demo functions
+   * initial all demo functions   
    */
   var initDemoScript = new function() {
 
     updateHeaderStyle();
     setSettingsBtn();
     $( 'a[data-header-style=' + currentHeaderStyle + ']' ).addClass( 'active' );
-    setSettingsFunction();
+	$( 'body' ).addClass( "trianglify-green-light theme-item" );
+    $( 'body' ).attr('id', 'theme-' + 'green' );
+	setSettingsFunction();
   }
 });
